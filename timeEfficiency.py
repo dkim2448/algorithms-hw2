@@ -1,3 +1,6 @@
+import time
+
+
 def timeEfficiency(funcName, *args, **kwargs):
     start_time = time.perf_counter()
 
