@@ -1,7 +1,9 @@
-# Python program for implementation of Insertion Sort
-# Geeks for Geeks
+# Global variable to track comparison
+comparisons = 0
 
 # Function to sort array using insertion sort
+
+
 def insertionSort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
