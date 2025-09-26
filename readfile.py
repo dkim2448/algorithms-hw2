@@ -7,6 +7,9 @@ def read_file(filename):
 
 
 if __name__ == "__main__":
-    data = read_file("rand1000.txt")
-    print(f"Loaded {len(data)} numbers")
-    print(f"First 10 numbers: {data[:10]}")
+
+    fileNames = ["rand1000.txt", "rand10000.txt"]
+    for name in fileNames:
+        data = read_file(name)
+        print(f"Loaded {len(data)} numbers")
+        print(f"First 10 numbers: {data[:10]}")
