@@ -1,5 +1,11 @@
+comparisons = 0
+
 # Merge function
+
+
 def merge(arr, left, mid, right):
+    global comparisons
+
     n1 = mid - left + 1
     n2 = right - mid
 
@@ -20,12 +26,14 @@ def merge(arr, left, mid, right):
     # Merge the temp arrays back
     # into arr[left..right]
     while i < n1 and j < n2:
+        comparisons += 1
         if L[i] <= R[j]:
             arr[k] = L[i]
             i += 1
         else:
             arr[k] = R[j]
             j += 1
+
         k += 1
 
     # Copy the remaining elements of L[],

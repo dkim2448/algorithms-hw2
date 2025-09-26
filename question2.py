@@ -1,7 +1,7 @@
-# Global variable to track comparison
+# Global variable to track comparisons
 comparisons = 0
 
-# Function to sort array using insertion sort
+# Insertion sort function
 
 
 def insertionSort(arr):
@@ -31,11 +31,3 @@ def printArray(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
-
-
-# Driver method
-if __name__ == "__main__":
-    arr = [12, 11, 13, 5, 6]
-    insertionSort(arr)
-    printArray(arr)
-    print(comparisons)
