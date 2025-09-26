@@ -157,7 +157,7 @@ def test_merge(filename):
 
 if __name__ == "__main__":
 
-    file_names = ["rand1000.txt", "rand10000.txt"]
+    file_names = ["rand1000.txt", "rand10000.txt", "rand100000.txt"]
 
     insertion_results = []
     merge_results = []
