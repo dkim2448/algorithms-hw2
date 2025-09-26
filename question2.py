@@ -1,5 +1,7 @@
 import time
 
+from datetime import datetime
+
 # Global variable to track comparisons
 comparisons = 0
 
@@ -157,20 +159,40 @@ def test_merge(filename):
 
 if __name__ == "__main__":
 
-    file_names = ["rand1000.txt", "rand10000.txt", "rand100000.txt"]
+    file_names = ["rand1000.txt", "rand10000.txt", "rand100000.txt", "rand250000.txt", "rand500000.txt", "rand1000000.txt"]    
 
     insertion_results = []
     merge_results = []
 
-    for file_name in file_names:
-        print(f"Testing {file_name}")
+    # for file_name in file_names:
+    #     print(f"Testing {file_name}")
 
+    #     insertion_time, insertion_comparison = test_insertion(file_name)
+    #     insertion_results.append((insertion_time, insertion_comparison))
+
+    #     merge_time, merge_comparison = test_merge(file_name)
+    #     merge_results.append((merge_time, merge_comparison))
+
+    # print("\nInsertion Results:")
+    # print(insertion_results)
+    # print("\nMerge Results:")
+    # print(merge_results)
+
+    # In your main section:
+    for file_name in file_names:
+        print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Testing {file_name}")
+        
+        print("  Running insertion sort...")
         insertion_time, insertion_comparison = test_insertion(file_name)
         insertion_results.append((insertion_time, insertion_comparison))
-
+        print(f"  Insertion sort: {insertion_time:.2f}s, {insertion_comparison:,} comparisons")
+        
+        print("  Running merge sort...")
         merge_time, merge_comparison = test_merge(file_name)
         merge_results.append((merge_time, merge_comparison))
+        print(f"  Merge sort: {merge_time:.2f}s, {merge_comparison:,} comparisons")
 
+    print(f"\n[{datetime.now().strftime('%H:%M:%S')}] All tests completed!")
     print("\nInsertion Results:")
     print(insertion_results)
     print("\nMerge Results:")
