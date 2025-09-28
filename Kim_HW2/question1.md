@@ -59,7 +59,7 @@ _note: table is in index.html_
    all of this used 1 weighing, so p(1) ✔️
 3. **inductive step: p(k) → p(k+1)**
    <br>
-   inductive hypothesis: assume finding a counterfeit coin among 3^k coins requires exactly n weighings
+   inductive hypothesis: assume finding a counterfeit coin among 3^k coins requires exactly k weighings
    <br>
    3^(k + 1) coins, one counterfeit coin
    <br>
